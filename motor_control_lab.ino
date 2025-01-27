@@ -4,10 +4,8 @@ void setup_ultrasonic(int trig, int echo) {
   pinMode(echo, INPUT);
 }
 
+// Returns ultrasonic distance in cm
 long read_ultrasonic(int trig, int echo) {
-  '''
-  Returns ultrasonic distance in cm
-  '''
   long mm, duration;
   digitalWrite(trig, LOW);
   delayMicroseconds(5);

@@ -1,6 +1,6 @@
 #ifndef ULTRASONIC_H
 #define ULTRASONIC_H
 
-void setup_ultrasonic(int trig, int echo);
-long read_ultrasonic(int trig, int echo);
+void setup_ultrasonic(uint8_t PIN);
+float read_ultrasonic(uint8_t PIN);
 #endif

@@ -1,11 +1,11 @@
 #include "ultrasonic.h"
-
+#define ultrasonic_pin A0
 void setup() {
   Serial.begin(9600);
-  setup_ultrasonic(9, 8);
+  setup_ultrasonic(A0);
 }
 
 void loop() {
-  long cm = read_ultrasonic(9, 8);
+  float cm = read_ultrasonic(A0);
   Serial.println(cm);
 }

@@ -8,7 +8,7 @@
 #define SLOT_PIN A5
 #define SERVO_PIN 11
 #define IR_PIN 7
-#define BUTOON_PIN 2
+#define BUTTON_PIN 2
 
 bool override = false;
 bool motor_mode = false; // motor mode= false represent position, true represents velocity
@@ -48,7 +48,7 @@ void loop() {
   float ultrasonic_distance_cm = read_ultrasonic(ULTRASONIC_PIN);
   float potentiometer_pos = read_potentiometer(POT_PIN, 10);  // set map maximum to be whatever we want(for now, 0 to 10)
 
-  if override { 
+  if(override) { 
 
     // TODO: Logic for override
 

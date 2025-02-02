@@ -1,5 +1,5 @@
 #include <IRremote.h>
-#include irsensor.h
+#include "irsensor.h"
 // #define IR_RECEIVE_PIN 7
 
 // TODO: need to be able to send commands

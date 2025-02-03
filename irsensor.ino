@@ -1,12 +1,14 @@
 #include <IRremote.h>
 #include irsensor.h
 // #define IR_RECEIVE_PIN 7
-void setup_irsensor() {
+
+// TODO: need to be able to send commands
+void setup_irsensor(uint8_t PIN) {
   // Serial.begin(9600);
-  IrReceiver.begin(IR_RECEIVE_PIN);
+  IrReceiver.begin(PIN);
 }
 
-int read_irsensor() {
+int read_irsensor(uint8_t PIN) {
   if (IrReceiver.decode()) {
     IrReceiver.resume();
     return (IrReceiver.decodedIRData.command);
